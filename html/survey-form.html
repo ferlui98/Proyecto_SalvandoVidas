@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.ibb.co/hDnTs0W/favicon.png" type="image/png" />
+    <title>Encuesta Salvando Vidas</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="container-form">
+        <main>
+            <h1 id="title">Formulario de Encuesta Salvando Vidas</h1>
+            <p id="description"><em>Esta encuesta tiene como finalidad conocer la opinion de nuestros usuarios acerca
+                    del maltrato animal y la adopción de animales callejeros en diversas comunidades.</em></p>
+            <form id="survey-form" action="https://formsubmit.co/8fd4ca00a434a8a05ed51121672c4e88" method="POST"
+                onsubmit="return validar_checkbox()">
+                <div class="form-group">
+                    <label id="name-label" for="name">Nombre:</label>
+                    <input type="text" name="username" id="name" placeholder="Ingrese su nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Correo electrónico:</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su correo electronico" required>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Edad:<span class="mini-text">(entre 13 y 120
+                            años)</span></label>
+                    <input type="number" name="age" id="number" min="13" max="120" placeholder="Ingrese su edad"
+                        required title="Hola" />
+                </div>
+                <div class="form-group">
+                    <p>1. Existe el maltrato animal en tu comunidad donde vives?</p>
+                    <label for="abuse-animal"><input type="radio" name="abuse-animal" value="Si" checked> Si</label>
+                    <label for="abuse-animal"><input type="radio" name="abuse-animal" value="No"> No</label>
+                </div>
+                <div class="form-group">
+                    <p>2. Qué tipo de maltrato existe más frecuentemente en tu comunidad?</p>
+                    <select id="dropdown" name="type_abuse" required>
+                        <option value="" disabled selected>Seleccione una opcion</option>
+                        <option value="Envenenamiento del animal">Envenenamiento</option>
+                        <option value="Abandono del Animal">Abandono</option>
+                        <option value="Falta de alimentos">Falta de Alimento</option>
+                        <option value="Agresion hacia el animal">Agresiones fisicas</option>
+                        <option value="Ninguna">Ninguna</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>3. Si tuvieras la oportunidad de recibir un apoyo económico para crear una fundacion de
+                        protección
+                        contra animales en tu comunidad.
+                        De las siguientes opciones. Que estrategias implementarias para exterminar este problema? <span
+                            class="mini-text">(Selecciona entre 1 a 3 casillas como máximo).</span></p>
+                    <label for="strategies"><input type="checkbox" value="Sanciones" name="strategies[]" />Sancionar a
+                        los individuos que
+                        practiquen el maltrato animal.</label>
+                    <label for="strategies"><input type="checkbox" value="Campañas de cocientizacion"
+                            name="strategies[]" />Crear campañas de
+                        concientización contra el maltrato
+                        animal.</label>
+                    <label for="strategies"><input type="checkbox" value="Escuelas de domesticacion"
+                            name="strategies[]" />Fundar escuelas para la
+                        domesticación de animales
+                        callejeros.
+                        <label for="strategies"><input type="checkbox" value="Jornadas de vacunacion y esteralización"
+                                name="strategies[]" />Realizar jornadas de vacunación y
+                            esteralización gratuitas para todos los animales. </label>
+                        <label for="strategies"><input type="checkbox" value="Zonas de Proteccion Animal"
+                                name="strategies[]" />Crear
+                            zonas de resguardo y protección para los animales que sufren de
+                            abandono. </label>
+                </div>
+                <div class="form-group">
+                    <p>4. Por último, qué opinas acerca de adoptar un animal de la calle en vez de comprarlo?
+                    </p>
+                    <textarea name="adoption_opinion" placeholder="Escribe aqui tu opinión..." required></textarea>
+                </div>
+                <input type="submit" id="submit" value="Enviar" />
+
+                <!-- Uso de Libreria FormSubmit JS para enviar correos electronicos-->
+                <!-- Informacion de la libreria en https://formsubmit.co/-->
+                <input type="hidden" name="_next" value="https://codepen.io/LuisFerTI98/pen/abKamop">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nueva respuesta! Fomulario Encuesta Salvando Vidas">
+                <input type="hidden" name="_template" value="table">
+
+            </form>
+        </main>
+    </div>
+    <script type="text/javascript" src="../js/validacion_checkbox.js"></script>
+</body>
+
+</html>
