@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+*{
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+}
+
+/*Estilos generales del fondo de imagen*/
+#hero-image{
+  background:linear-gradient(90deg,hsla(173, 18%, 62%, 0.8) 0%, hsla(161, 53%, 44%, 0.7) 100%),url(https://media.istockphoto.com/id/1172155138/photo/animal-shelter.jpg?s=612x612&w=0&k=20&c=4dM95KaCyzuth5O7nveaXXe5emSnDZetq3AJ7546EBE=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/*Estilo para texto justificado*/
+.text-justify{
+  text-align: justify;
+}
+
+/*Estilos generales de los botones*/
+.btn-light{
+  color:#35b08b;
+  font-weight: 700;
+}
+
+.btn-light:hover{
+  color:#35b08b;
+  opacity:0.9;
+}
+
+.btn-outline-light{
+  font-weight: 700;
+}
+
+.btn-outline-light:hover{
+  color:#35b08b;
+  font-weight: 700;
+}
+
+
+/*Animaciones del titulo y subtitulo*/
+#title, #subtitle{
+  animation: fadeinBottom 1s ease-in-out forwards;
+}
+
+/*Animacion de la seccion de botones*/
+#section-buttons{
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/*Animaciones fadeIn, fadeinBottom*/
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyFrames fadeinBottom{
+  0%{
+    opacity:0;
+    transform: translateY(100%);
+  }
+
+  100%{
+    opacity:1;
+  }
+}
